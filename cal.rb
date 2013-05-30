@@ -1,8 +1,6 @@
 def calcit
   while true
-    puts "Would you like to calculate something?"
-    initiate = gets.chomp.downcase
-    if (initiate == 'yes' || initiate == 'no')
+    if (initiate == 'yes' || initiate == 'no') #try to remove - this is duplicated
       if initiate == 'yes'
         while true
         	puts "Would you like to use a basic calulator?"
@@ -45,20 +43,6 @@ def calcit
 		            	puts "#{first_num} is not a correct number, please re-enter"
 		            end
 	            end
-		          while true
-		            puts "Would you like to use the calculator again?"
-		            run = gets.chomp.downcase	
-		            if (run == 'yes' || run == 'no')
-		              if run == "yes"
-		                rerun = true
-		              else 
-		              	puts "Okay, see you later!"
-		              end
-		              break
-		            else
-		              puts 'Please answer "yes" or "no".'
-		            end
-		          end
 		        else
 		          while true
 		          	puts "What number are you going to use for the advanced calculator?"
@@ -70,7 +54,7 @@ def calcit
 				            if (adv_answer == "square" || adv_answer == "square root")
 				            	if adv_answer == "square"
 						            puts (adv_num.to_f**2)
-						          else adv_answer == "square root"
+						        else adv_answer == "square root"
 						            puts (adv_num.to_f**0.5)
 					            end
 					            break
@@ -83,20 +67,6 @@ def calcit
 					        puts "#{adv_num} is not a correct number, please re-enter"
 					      end
 				      end
-		          while true
-		            puts "Would you like to use the calculator again?"
-		            adv_run = gets.chomp.downcase	
-		            if (adv_run == 'yes' || adv_run == 'no')
-		              if adv_run == "yes"
-		                rerun = true
-		              else
-		                puts "Okay, see you later!"
-		              end
-		              break
-		            else
-		              puts 'Please answer "yes" or "no".'
-		            end
-		          end
 		        end
 		        break
 		      else
@@ -115,7 +85,7 @@ end
 calcit
 
 while true
-  puts "Would you like to use the calculator again?"
+  puts "Would you like to use the calculator?"
   rerun = gets.chomp.downcase
   if rerun == "no"
   	puts "Okay, see you later!"
