@@ -113,3 +113,18 @@ def calcit
 end
 
 calcit
+
+while true
+  puts "Would you like to use the calculator again?"
+  rerun = gets.chomp.downcase
+  if rerun == "no"
+  	puts "Okay, see you later!"
+  else
+    if rerun == "yes"
+      calcit    
+    else 
+      puts "Please answer 'yes' or 'no'."
+    end
+    break
+  end
+end
