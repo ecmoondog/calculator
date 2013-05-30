@@ -4,6 +4,7 @@ def calcit
 	initiate = gets.chomp.downcase
 	  while true
 	    if (initiate == 'yes' || initiate == 'no')
+	      if initiate == 'yes'
 	        while true
 	        	puts "Would you like to use a basic calulator?"
 	        	reply = gets.chomp.downcase
