@@ -1,10 +1,9 @@
 def calcit
 	loop {
-	puts "Would you like to use the calculator?"
+	puts "Are you ready?"
 	initiate = gets.chomp.downcase
 	  while true
-	    if (initiate == 'yes' || initiate == 'no') #try to remove - this is duplicated
-	      if initiate == 'yes'
+	    if (initiate == 'yes' || initiate == 'no')
 	        while true
 	        	puts "Would you like to use a basic calulator?"
 	        	reply = gets.chomp.downcase
