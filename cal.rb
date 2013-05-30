@@ -60,17 +60,29 @@ def calcit
 		            end
 		          end  	
 		        else
-		          puts "What number are you going to use for the advanced calculator?"
-		          adv_num = gets.chomp.to_f
-		          puts 'Would you like to find the "square" or the "square root"?'
-		          adv_answer = gets.chomp.downcase
-		          if adv_answer == "square"
-		            puts (adv_num**2)
-		          elsif adv_answer == "square root"
-		            puts (adv_num**0.5)
-		          else
-		            puts 'Please answer "square" or "square root".'
-		          end		
+		          while true
+		          	puts "What number are you going to use for the advanced calculator?"
+		            adv_num = gets.chomp
+		            if (adv_num.class != "Float" || adv_num.class != "Fixnum")
+		              while true
+		              	puts 'Would you like to find the "square" or the "square root"?'
+			              adv_answer = gets.chomp.downcase
+				            if (adv_answer == "square" || adv_answer == "square root")
+				            	if adv_answer == "square"
+						            puts (adv_num.to_f**2)
+						          else adv_answer == "square root"
+						            puts (adv_num.to_f**0.5)
+					            end
+					            break
+					          else
+					            puts 'Please answer "square" or "square root".'
+					          end
+					        end
+					        break
+					      else
+					        puts "#{adv_num} is not a correct number, please re-enter"
+					      end  
+				      end    		
 		          while true
 		            puts "Would you like to use the calculator again?"
 		            run = gets.chomp.downcase	
