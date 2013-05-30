@@ -1,6 +1,6 @@
-def calcit
+def calcit question
   while true
-    puts "Would you like to calculate something?"
+    puts question
     initiate = gets.chomp.downcase
 
     if (initiate == 'yes' || initiate == 'no')
@@ -61,17 +61,18 @@ def calcit
               puts 'Please answer "yes" or "no".'
             end
           end  
-        else
-          puts 'Please answer "yes" or "no".'
-        end	
+        
+        puts 'Please answer "yes" or "no".'
+        end
       else puts "Okay, see you later!"
-        initiate = false
+        run = false
       end
       break
     else
       puts 'Please answer "yes" or "no".'
     end
-  end	
+  end
+  run	
 end
 
-calcit
+calcit "Would you like to calculate something?"
