@@ -12,7 +12,7 @@ def calcit
 		          while true
 		          	puts "What is your first input number?"
 		            first_num = gets.chomp
-		            if (first_num.class != "Float" || first_num.class != "Fixnum")
+		            if (first_num.class = "Float" || first_num.class = "Fixnum") #may cause error with large numbers...
 		              while true 
 		              	puts "Would you like to add, subtract, multiply, or divide that number?"
 		            	  function = gets.chomp.downcase
@@ -20,7 +20,7 @@ def calcit
 		                  while true 
 		                  	puts "What would you like to #{function} from #{first_num}"
 		                    second_num = gets.chomp
-		                    if (second_num.class != "Float" || second_num.class != "Fixnum")
+		                    if (second_num.class = "Float" || second_num.class = "Fixnum") #may cause error with large numbers...
 	               	        if function == "add"
 	                       	  puts (first_num.to_f + second_num.to_f)
 	                   	    elsif function == "subtract"
@@ -63,7 +63,7 @@ def calcit
 		          while true
 		          	puts "What number are you going to use for the advanced calculator?"
 		            adv_num = gets.chomp
-		            if (adv_num.class != "Float" || adv_num.class != "Fixnum")
+		            if (adv_num.class = "Float" || adv_num.class = "Fixnum") #may cause error with large numbers...
 		              while true
 		              	puts 'Would you like to find the "square" or the "square root"?'
 			              adv_answer = gets.chomp.downcase
