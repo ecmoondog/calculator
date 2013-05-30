@@ -31,7 +31,7 @@ def calcit
               if (run == 'yes' || run == 'no')
                 if run == "yes"
                   run = true
-                else
+                else puts "Okay, see you later!"
                   run = false
                 end
               else
@@ -54,7 +54,7 @@ def calcit
             if (run == 'yes' || run == 'no')
               if run == "yes"
                 run = true
-              else
+              else puts "Okay, see you later!"
                 run = false
               end
             else
@@ -67,6 +67,7 @@ def calcit
       else puts "Okay, see you later!"
         initiate = false
       end
+      break
     else
       puts 'Please answer "yes" or "no".'
     end
