@@ -9,26 +9,40 @@ def calcit
         	reply = gets.chomp.downcase
 		      if (reply == 'yes' || reply == 'no')
 		        if reply == 'yes'
-		          puts "What is your first input number?"
-		          first_num = gets.chomp.to_f
-		          while true 
-		          	puts "Would you like to add, subtract, multiply, or divide that number?"
-		          	function = gets.chomp.downcase
-		          	if (function == 'add' || function == 'subtract' || function == 'multiply' || function == 'divide' )
-			            puts "What would you like to #{function} from #{first_num}"
-			            second_num = gets.chomp.to_f
-			          	if function == "add"
-			              puts (first_num + second_num)
-			            elsif function == "subtract"
-			              puts (first_num - second_num)
-			            elsif function == "multiply"
-			              puts (first_num * second_num)
-			            else function == "divide"
-			              puts (first_num / second_num)
-	              	end
-	              	break
+		          while true
+		          	puts "What is your first input number?"
+		            first_num = gets.chomp
+		            if (first_num.class != "Float" || first_num.class != "Fixnum")
+		              while true 
+		              	puts "Would you like to add, subtract, multiply, or divide that number?"
+		            	  function = gets.chomp.downcase
+	               		if (function == 'add' || function == 'subtract' || function == 'multiply' || function == 'divide' )
+		                  while true 
+		                  	puts "What would you like to #{function} from #{first_num}"
+		                    second_num = gets.chomp
+		                    if (second_num.class != "Float" || second_num.class != "Fixnum")
+	               	        if function == "add"
+	                       	  puts (first_num.to_f + second_num.to_f)
+	                   	    elsif function == "subtract"
+	              	          puts (first_num.to_f - second_num.to_f)
+	               	        elsif function == "multiply"
+	                          puts (first_num.to_f * second_num.to_f)
+	                        else function == "divide"
+	                          puts (first_num.to_f / second_num.to_f)
+                  	      end
+                          break
+                        else
+                          puts "#{second_num} is not a correct number, please re-enter"
+                        end    
+		                  end
+		                  break
+		                else
+		                  puts "#{function} is not correct, please check your spelling and retry."
+		              	end
+		              end
+		              break
 		            else
-		              puts "#{function} is not correct, please check your spelling and retry."
+		            	puts "#{first_num} is not a correct number, please re-enter"
 		            end
 	            end
 		          while true
