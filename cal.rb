@@ -1,4 +1,4 @@
-def calcit 
+def calcit
   while true
     puts "Would you like to calculate something?"
     initiate = gets.chomp.downcase
@@ -33,7 +33,7 @@ def calcit
                           break
                         else
                           puts "#{second_num} is not a correct number, please re-enter"
-                        end    
+                        end
 		                  end
 		                  break
 		                else
@@ -50,15 +50,15 @@ def calcit
 		            run = gets.chomp.downcase	
 		            if (run == 'yes' || run == 'no')
 		              if run == "yes"
-		                run = true
-		              else puts "Okay, see you later!"
-		                run = false
+		                rerun = true
+		              else 
+		              	puts "Okay, see you later!"
 		              end
 		              break
 		            else
 		              puts 'Please answer "yes" or "no".'
 		            end
-		          end  	
+		          end
 		        else
 		          while true
 		          	puts "What number are you going to use for the advanced calculator?"
@@ -81,16 +81,16 @@ def calcit
 					        break
 					      else
 					        puts "#{adv_num} is not a correct number, please re-enter"
-					      end  
-				      end    		
+					      end
+				      end
 		          while true
 		            puts "Would you like to use the calculator again?"
-		            run = gets.chomp.downcase	
-		            if (run == 'yes' || run == 'no')
-		              if run == "yes"
-		                run = true
-		              else puts "Okay, see you later!"
-		                run = false
+		            adv_run = gets.chomp.downcase	
+		            if (adv_run == 'yes' || adv_run == 'no')
+		              if adv_run == "yes"
+		                rerun = true
+		              else
+		                puts "Okay, see you later!"
 		              end
 		              break
 		            else
@@ -98,20 +98,18 @@ def calcit
 		            end
 		          end
 		        end
-		        break  
+		        break
 		      else
 		        puts 'Please answer "yes" or "no".'
 		      end
 		    end 
       else puts "Okay, see you later!"
-        run = false
       end
       break
     else
       puts 'Please answer "yes" or "no".'
     end
   end
-  run	
 end
 
 calcit
